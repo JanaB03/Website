@@ -11,6 +11,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background-color: #17364B;
+  color:white
 }
 
 /* Header style */
@@ -27,6 +28,18 @@ header {
   width: 100%;
   z-index: 999;
 }
+.case-study h3{
+  text-align: center;
+  font-size: 40px;
+}
+.case-study h4{
+  font-size:30px
+}
+.describe{
+  font-size:20px;
+  text-align:center;
+}
+
 
 .logo h1 {
   font-size: 2rem;
@@ -73,7 +86,7 @@ main {
 
 .hero p {
   font-size: 1.2rem;
-  color: #666;
+  color: #C1A50B;
   margin-bottom: 1rem;
 }
 
@@ -85,6 +98,7 @@ hr {
   width: 50%;
 }
 
+
 .portfolio {
   text-align: center;
 }
@@ -92,7 +106,7 @@ hr {
 .portfolio h3 {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: #FBB8A2;
   margin-bottom: 2rem;
 }
 
