@@ -15,7 +15,7 @@ body {
 }
 
 /* Header style */
-header {
+.headerindex {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +28,64 @@ header {
   width: 100%;
   z-index: 999;
 }
+/*project1*/
+/* section 1*/
+.box1 p{
+    background-color: #FBB8A2;
+    border-width: 3px;
+    border-style: solid;
+    padding: 5%;
+    font-size: 20px;
 
+}
+.box1 h3{
+  text-align: center;
+  font-size: 50px;
+
+}
+/* section 2*/
+
+.box2 h3{
+text-align: center;
+font-size: 50px;
+
+}
+.box2 p{
+font-size: 20px;
+background-color: #FBB8A2;
+border-width: 3px;
+border-style: solid;
+padding: 5%;
+}
+
+/*section 3*/
+
+.box3 h3{
+text-align: center;
+font-size: 50px;
+
+}
+.box3 p{
+font-size: 20px;
+background-color: #FBB8A2;
+  border-width: 3px;
+  border-style: solid;
+  padding: 5%;
+}
+
+/*section 4*/
+.box4 h3{
+text-align: center;
+font-size: 50px;
+
+}
+.box4 p{
+font-size: 20px;
+background-color: #FBB8A2;
+  border-width: 3px;
+  border-style: solid;
+  padding: 5%;
+}
 
 .case-study h3{
   text-align: center;
@@ -42,6 +99,7 @@ header {
   text-align:center;
   line-height: 2.0;
 }
+
 
 
 .logo h1 {
@@ -169,5 +227,123 @@ footer a:hover {
   text-decoration: underline;
 }
 
+.resume-section {
+  margin-bottom: 40px;
+}
+.resume-section h2 {
+  margin-bottom: 10px;
+}
+.resume-section ul {
+  margin-left: 20px;
+  margin-top: 0;
+}
+.resume-section ul li {
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.resume-section ul li:last-child {
+  margin-bottom: 0;
+}
+.resume-section p {
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
 
 
+.sticky-header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+#fullscreen {
+  height: 100vh; /* 50% of the viewport height */
+  width: 100%;
+  overflow: hidden;
+}
+
+#fullscreen img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#title {
+  height: 100vh; /* 50% of the viewport height */
+  width: 100%;
+  overflow: hidden;
+}
+
+#title img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#Probelm {
+  height: 100vh; /* 50% of the viewport height */
+  width: 100%;
+  overflow: hidden;
+}
+
+#Problem img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#pinpoints {
+  height: 100vh; /* 50% of the viewport height */
+  width: 100%;
+  overflow: hidden;
+}
+
+#pinpoints img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#Problem1 {
+  height: 100vh; /* 50% of the viewport height */
+  width: 100%;
+  overflow: hidden;
+}
+
+#Problem1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#Problem2 {
+  height: 100vh; /* 50% of the viewport height */
+  width: 100%;
+  overflow: hidden;
+}
+
+#Problem2 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#wireframe {
+  height: 100vh; /* 50% of the viewport height */
+  width: 100%;
+  overflow: hidden;
+}
+
+#wireframe img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.iframe-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.iframe {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
