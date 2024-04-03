@@ -1,349 +1,61 @@
-/* CSS reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UX Case Study Template</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="javascript.js"></script>
+</head>
 
-/* Body style */
-body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #17364B;
-  color:white
-}
+<body>
+	<header class="headerindex">
+		<div class="logo">
+			<h1>Jana Bridi</h1>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="https://docs.google.com/document/d/1t1_m6O4Gym2jisck62LkEFu7Hahhc5FKJzOWG4fY89g/edit?usp=sharing">Resume</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<img id ="fullscreen" src="Cover Page.png" alt="Full-Screen Image">
+		<img id ="title" src="Title (1).png" alt="Title Image">
+		<img id ="Problem" src="Problem (1).png" alt="Problem Image">
+		<img id ="Problem1" src="Problem1.png" alt="Problem Image">
+		<img id ="Problem2" src="Problem2.png" alt="Problem Image">
+		<img id ="pinpoints" src="UserpinPoints (1).png" alt="pinpoints Image">
+		<img id ="wireframe" src="wireframe.png" alt="wireframe Image">
+		
+	</section>
+		<section class="iframe-container">
+		<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="360" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FLane3ZbV4hbbAYoYHvLnL5%2FMeditation-app%3Ftype%3Ddesign%26node-id%3D18-1068%26t%3DAFFjJUeHIlQTOQ3c-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D18%253A743%26mode%3Ddesign" allowfullscreen></iframe>
+		<video width="640" height="360" controls>
 
-/* Header style */
-.headerindex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #C14A42;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-}
-/*project1*/
-/* section 1*/
-.box1 p{
-    background-color: #FBB8A2;
-    border-width: 3px;
-    border-style: solid;
-    padding: 5%;
-    font-size: 20px;
-
-}
-.box1 h3{
-  text-align: center;
-  font-size: 50px;
-
-}
-/* section 2*/
-
-.box2 h3{
-text-align: center;
-font-size: 50px;
-
-}
-.box2 p{
-font-size: 20px;
-background-color: #FBB8A2;
-border-width: 3px;
-border-style: solid;
-padding: 5%;
-}
-
-/*section 3*/
-
-.box3 h3{
-text-align: center;
-font-size: 50px;
-
-}
-.box3 p{
-font-size: 20px;
-background-color: #FBB8A2;
-  border-width: 3px;
-  border-style: solid;
-  padding: 5%;
-}
-
-/*section 4*/
-.box4 h3{
-text-align: center;
-font-size: 50px;
-
-}
-.box4 p{
-font-size: 20px;
-background-color: #FBB8A2;
-  border-width: 3px;
-  border-style: solid;
-  padding: 5%;
-}
-
-.case-study h3{
-  text-align: center;
-  font-size: 40px;
-}
-.case-study h4{
-  font-size:30px
-}
-.describe{
-  font-size:20px;
-  text-align:center;
-  line-height: 2.0;
-}
+			<source src="figma.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		</section>
+	</main>
+	
+		<img style="width: 30%; height: 30%; border-radius: 200px" src="https://via.placeholder.com/320x285" />
+		<section class="goals">
+			<div style="color: white; font-size: 24px; font-family: DM Sans; font-weight: 500; line-height: 36px; letter-spacing: 0.15px; word-wrap: break-word">Goals<br/>-Stress Reduction<br/>-Community Connection<br/>-Creative Inspiration</div>
+	</section>
+	
+	<div style="width: 100%; height: 100%; position: relative; background: #17364B">
+		<div style="padding: 32px; left: 111px; top: 96px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 64px; display: inline-flex">
+			<div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 40px; display: flex">
+				<div style="color: #F6F2E4; font-size: 20px; font-family: Open Sans; font-weight: 700; text-transform: uppercase; line-height: 30px; letter-spacing: 1.50px; word-wrap: break-word">User Profiles</div>
+			</div>
+		
+	</section>
+	</main>
 
 
-
-.logo h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #F0B09D;
-}
-
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-}
-
-nav ul li a {
-  color: #F0B09D;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 0 1rem;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #FFA07A;
-}
-
-/* Main style */
-main {
-  padding: 8rem 2rem 2rem;
-  margin-top: 5rem;
-}
-
-.hero {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.hero h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #F0B09D;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #C1A50B;
-  margin-bottom: 1rem;
-}
-
-hr {
-  border: 0;
-  height: 2px;
-  background-color: #FFA07A;
-  margin: 2rem auto;
-  width: 50%;
-}
-
-
-.portfolio {
-  text-align: center;
-}
-
-.portfolio h3 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #FBB8A2;
-  margin-bottom: 2rem;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.buttons a {
-  width: 500px; 
-  height: 500px;
-  border: none; 
-  border-radius: 50%; 
-  overflow: hidden; 
-  background-color: transparent; 
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.buttons a:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.buttons img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: all 0.3s ease;
-}
-
-.buttons a:hover img {
-  transform: scale(1.2);
-}
-
-/* Footer style */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-}
-
-footer p {
-  font-size: 1rem;
-}
-
-footer a {
-  color: #FFFF0000;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-.resume-section {
-  margin-bottom: 40px;
-}
-.resume-section h2 {
-  margin-bottom: 10px;
-}
-.resume-section ul {
-  margin-left: 20px;
-  margin-top: 0;
-}
-.resume-section ul li {
-  margin-bottom: 5px;
-  font-size: 18px;
-  line-height: 1.5;
-}
-.resume-section ul li:last-child {
-  margin-bottom: 0;
-}
-.resume-section p {
-  margin-bottom: 0;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-
-.sticky-header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-#fullscreen {
-  height: 100vh; /* 50% of the viewport height */
-  width: 100%;
-  overflow: hidden;
-}
-
-#fullscreen img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-#title {
-  height: 100vh; /* 50% of the viewport height */
-  width: 100%;
-  overflow: hidden;
-}
-
-#title img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-#Probelm {
-  height: 100vh; /* 50% of the viewport height */
-  width: 100%;
-  overflow: hidden;
-}
-
-#Problem img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-#pinpoints {
-  height: 100vh; /* 50% of the viewport height */
-  width: 100%;
-  overflow: hidden;
-}
-
-#pinpoints img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-#Problem1 {
-  height: 100vh; /* 50% of the viewport height */
-  width: 100%;
-  overflow: hidden;
-}
-
-#Problem1 img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-#Problem2 {
-  height: 100vh; /* 50% of the viewport height */
-  width: 100%;
-  overflow: hidden;
-}
-
-#Problem2 img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-#wireframe {
-  height: 100vh; /* 50% of the viewport height */
-  width: 100%;
-  overflow: hidden;
-}
-
-#wireframe img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.iframe-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.iframe {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
+</body>
+</html>
