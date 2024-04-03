@@ -1,29 +1,239 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Project 1 - Jana Bridi - UX Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <h1>Jana Bridi</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="https://docs.google.com/document/d/1hrSS5-GvTVm4da7i2VWKf1_ZewiRsLDrEFcftGYh-sU/edit">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <h2>Website</h2>
-        <p>This website that you are currently on I coded using html, css, and javascript</p>
+
+<html lang="en">
+
+<head>
+	<title>AI Text to Image prompt</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+
+	<link rel="stylesheet" href="project2style.css">
+
+	<header class="headerindex">
+		<div class="logo">
+			<h1>Jana Bridi</h1>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="https://docs.google.com/document/d/1t1_m6O4Gym2jisck62LkEFu7Hahhc5FKJzOWG4fY89g/edit?usp=sharing">Resume</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+        
+        <body>
+            
+        
+            <div class="project-body">
+              <h1 id="title">Prompt Engineering for AI Text-to-Image Generators</h1>
+        
+          
+                <!-- temp img  -->
+                <div class="titleimg">
+                <img src="Group 1.png" alt="small_img"> 
+                </div>
+                    </div>
+              
+        
+                    <hr>
+        
+                    
+                        <div class="container1">
+                            <div class="column">
+                                <h2>Project Type</h2>
+                                <p>Mobile Application</p>
+                                <h2>Timeline</h2>
+                                <p>January 2024 - March 2024</p>
+                            </div>
+                            <div class="column">
+                                <h2>Role</h2>
+                                <p>UX Designer, Researcher, Visual Designer</p>
+                                <h2>Team</h2>
+                                <p>4 Designers</p>
+                            </div>
+                        </div>
+                
+                <div class="project-body">
+        
+              <h3>Background</h3> 
+               <p> This project was for an upper division Design class at UCSD called Design for Creativity and Productivity. For this project we designed and prototyped an interactice system that adressed a probelm in productivity </p>
+        
+              <h3>Understanding the Problem</h3>
+        
+                </div>
+        
+                    <p>AI models lack effective iterative feedback mechanisms that scale with user proficiency</p>
+                    <h2>Underlying Cause</h2>
+                    <ul>
+                      <li>Greater fine tuning of AI model response requires knowledge of application-specific jargom from end users</li>
+                      <li>Beginners are contrained by their limited knowledge of the application/field</li>
+                      <li>Companies are contrained by the contraints of their end users</li>
+                    </ul>
+                <div class="project-body">
+        
+                
+                    <h3>Probelm Statement</h3>
+                    
+              
+                    <p class=findings id="problem-statement"> "Given that the user has a well-formed intent, how can they interact with previously generated images to fine-tune the model to create what they want?
+
+            
+              <h3>Research</h3>
+              <ol type="I">
+                <li class="subsection">Competitive Analysis</li>
+                <p>Given the broad nature of our problem space, we performed an exhaustive competitive analysis of over 3 related products.</p>
+        
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr class="hrow">
+                                <th scope="col">Competitors             </th>
+                                <th scope="col">Strengths</th>
+                                <th scope="col">Limitations</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="tbody">
+                                <th scope="row">GenAssist</th>
+                                <td> 
+                                    <p>Accessible text-to-image generation system that simplifies image selection and generation for Blind and Low Vision Creators</p>
+                                </td>
+                                <td>
+                                  <ul>
+                                    <li>Focuses on accessibilty and creativity rather than productivity</li>
+                                  <li>Users are unfamiliar with domain-specific styilizing terms for first image</li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              <tr class="tbody">
+                                <th scope="row">Promptify</th>
+                                <td>
+                                    <p>Enhance text-to-image generation through interactive LLM system that suggests and refines prompts</p>
+                                </td>
+                                <td>
+                                  <ul>
+                                    <li>Users that knew what they wanted found extra prompt ideation features less useful/more tedious</li>
+                                    <li>Systems flexibility to accommodate different user preferences is limited</li>
+                                  </ul>
+                                </td>
+                              </tr>
+                              
+                          
+                            </tbody>
+                          </table>
+                
+        
+                
+        
+                        <li class="subsection">Sketches</li>
+                
+                        <p> We each did low-fi sketches to brainstorm different ideas to adress the problem</p>
+                          <img src="sketch1.png">
+                          <img src="sketch2.png">
+                
+                        
+                <li class="subsection">Sketches Improvements</li>
+                    </div>
+                    <p>After going through sketches from above we then selected ideas that we wanted to improve we selected the negative prompting feature and image component selection and further explored the idea and added more details to our skethes</p>
+                    <img src="sketch3.png">
+                    <img src="sketch4.png">
+                    <img src="sketch 5.png">
+                       
+        
+                    <div class="project-body">
+        
+                <h2>Wireframes</h2>
+                <p> We then created our wireframes from our different sketches</p>
+                <div class="findingsimg">
+                <img src="wireframe1.png">
+                <img src="wireframe2.png">
+                <img src="wireframe3.png">
+                </div>
+                
+                        
+                  <!--<ol type="1" font-size: 1.5rem;>
+                  
+                                <li class="reveal list-insight" id="first" >
+                                    <span class="highlight-purple">Keep it simple and straightforward</span>
+                                    <p class="insight-des">Though the primary audience is centered around parents,the app is targeted at any person facing the diagnosis of a loved one, from grandparents to young care-givers.
+                                    </li></p>
+                               
+                                <li class="reveal list-insight" id="first"><span class="highlight-purple">Provide channels for connection and communication</span>
+                                    <p class="insight-des"> For those who may not have access to a local support system, are too overwhelmed to actively seek support, or for more experienced families that want to reach out to others, users can greatly benefit from listening to other peoples’ stories and sharing their own journey.</p>
+                                </li>
+        
+                                <li class="reveal list-insight" id="first"><span class="highlight-purple">Every family is different</span>
+                                    <p class="insight-des"> Some families may be more closed off, some may may be eager to connect with others, and some may want to create a platform to vocally advocate for their situation.The app should provide features that can appeal to a variety of families, no matter what they are trying to get out of their experience.
+                                </p>
+                                </li>
         
         
-      </section>
-    </main>
-    <script src="script.js"></script>
+                                <li class="reveal list-insight" id="first"><span class="highlight-purple">The need for care doesn’t stop after the hospital</span>
+                                    <p class="insight-des">Many parents are forced to become nurses and doctors, constanty monitoring their children's behavior.
+                                        This added role on top of being a parent can create cause constant stress, fear, and anxiety and it is essential to provide resources or tools that can help ease this burden.</p>
+                                </li>
+        
+                                <li class="reveal list-insight" id="first"><span class="main-point highlight-purple">Balance sharing with safety and security</span>
+                                    <p class="insight-des">A virtual community is a great way to build connection, but it's crucial to ensure that the all users are verified and feel comfortable to share as much or as little as they like. Some may be wary of sharing vulnerable experiences with others, so anonymity can be appealing.</p>
+                                </li>
+                            </ol>
+                <p>In order to satisfy our clients’ needs, address our user insights, and synthesize our competitive findings, we focused on <b>combining key functionalities</b> from different categories to create a centralized product that that not only <b>nurtures users' psychological well-being </b>but also <b>enhances overall parenting efficiency</b>.</p>
+                
+              <span class="intro-problem">So, our solution evolved into...</span>
+                    
+              <p class="reveal" id="solution"><span style="color: #7648a5">Project 1095</span>, a centralized support system for the pediatric cancer journey</p>
+              <p>Our goal is to help parents and loved ones navigate diagnosis, treatment, and recovery with <span class="bold" style="color:  #7648a5"> a safe community and emotional support </span>, <span class="bold" style="color:  #7648a5">accessible resources</span> for learning and sharing information, and <span class="bold" style="color:  #7648a5">convenient tools</span> to keep track of medications and appointments. </p>
+              <br>
+                -->
+              <h3>Final Prototype</h3>
+              <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F15CreWvu1kXQd8hcewnrJc%2FUntitled%3Ftype%3Ddesign%26node-id%3D1-912%26t%3DhXOXHiNGOCzP7UBo-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A912%26mode%3Ddesign" allowfullscreen></iframe>
+        
+            <h3>Summary</h3>
+                        <table>
+                            <tr>
+                              <th>Natural Language Feeback</th>
+                              <th>Component Selection</th>
+                              <th>Vocal Input Translation</th>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p>Isolated editable natural language statements help users develop mental model of the system
+
+                                </p>
+                              </td>
+                              <td>
+                                <p>Component selection allows user to specify intent during fine-tuning
+
+                                </p>
+                              </td>
+                              <td>
+                                <p>Translating natural utterances into specific, executable commands
+
+                                </p>
+                              </td>
+                            </tr>
+                          </table>
+                          <p>To recap, we created three different features that all try to bridge the gap between user intents and system output and encourage system understanding. We see that isolated editable natural language statements help users develop a mental model of how the system works. Component selection offers an intuitive way for users to specify what components of an image that they like or dislike, and vocal input allows us to translate our most natural form of language input into executable commands that the computer can understand accurately. 
+
+                          </p>
+
+                      <h3>Implication and Future Directions</h3>
+                      <p>As these LLM models improve we’ll be able to achieve more and be able to perform even more complex text-to-image generation tasks. But if we continue to use natural language as a mode of input, we need to make sure that this increased complexity of the system is still able to connect with our basic intents. We believe that leveraging AI to encourage system understanding of these complex mechanisms will be very important in how these models will be able to keep this bridge of communication between user and system strong. Text-to-image generation models is just one small facet of natural language input. All programs that will take in natural language as input will have to find away to convey an effective mental model of their system for their end users. Furthermore, within text-to-image generation, we operated on two main assumptions: that the user already had a well-formed idea of what they wanted, and that images had already been created. Future research should look into how we can encourage creativity through prompt engineering, even before an initial batch of images is created. 
+</p>
+                      <br>
+                      <p>However, within text-to-image generation, we operated on two main assumptions: that the user already had a well-formed idea of what they wanted, and that images had already been created. Future research should look into how we can encourage creativity through prompt engineering, even before an initial batch of images is created. How can we design effective interfaces that guide the user through prompt generation without constraining creativity?
+
+                      </p>
+                        
+        
+        
+               
+          
+        
+       
   </body>
 </html>
