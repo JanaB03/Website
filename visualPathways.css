@@ -1,0 +1,8 @@
+/* Over view table */
+.table-container {
+    white-space: nowrap; /* Prevents line breaks */
+  }
+  .table-container div {
+    display: inline-block;
+    margin-right: 20px; /* Adjust the margin between tables */
+  }
