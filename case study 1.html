@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <title>Visual Pathways</title>
     <style>
         body {
@@ -11,27 +12,23 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #fff;
         }
         .case-study {
-            max-width: 800px;
-            margin: 0 auto;
             padding: 20px;
         }
         h1, h2, h3 {
             color: #333;
         }
         h1 {
-  text-align: center;
-}
+            text-align: center;
+        }
         .section {
             margin-bottom: 30px;
         }
         .section-title {
             font-size: 1.5em;
             margin-bottom: 10px;
-        }
-        .section-content {
-            margin-left: 20px;
         }
         .highlight {
             background-color: #f0f8ff;
@@ -40,31 +37,19 @@
             margin-left: -20px;
             margin-right: -20px;
         }
-
-        .section-table{
-            background-color: #f0f8ff;
-            padding: 15px;
-            border-left: 5px solid #0073e6;
-            margin-left: -20px;
-            margin-right: -20px;
-
-        }
-        .highlight .section-content {
-            margin-left: 0;
-        }
         .carousel-container {
             overflow-x: auto;
             white-space: nowrap;
-            -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+            -webkit-overflow-scrolling: touch;
         }
         .carousel-slide {
             display: inline-block;
-            min-width: 100%;
+            min-width: 50%; /* Reduced size */
             box-sizing: border-box;
             vertical-align: top;
         }
         .carousel-slide img {
-            width: 50%; /* Reduce image width to half */
+            width: 50%; /* Reduced size */
             height: auto;
             display: block;
             margin: 0 auto;
@@ -75,22 +60,15 @@
             background-color: #333;
             color: white;
             padding: 10px 0;
-            width: 100vw; /* Full width */
-            left: 0; /* Align to left edge */
-            position: relative; /* Relative positioning */
-            margin-left: -50vw; /* Center alignment adjustment */
-            margin-right: -50vw; /* Center alignment adjustment */
-            transform: translateX(50vw); /* Center alignment adjustment */
+            width: 100%;
             z-index: 1000;
         }
         .step-navigation.sticky {
             position: fixed;
             top: 0;
-            width: 100%; /* Full width when sticky */
-            left: 0; /* Align to left edge */
-            transform: none; /* Reset transform when sticky */
-            margin-left: 0; /* Reset margin when sticky */
-            margin-right: 0; /* Reset margin when sticky */
+            width: 100%;
+            left: 0;
+            transform: none;
         }
         .step-navigation a {
             color: white;
@@ -103,405 +81,281 @@
         }
         .background-image {
             width: 100%;
-            height: 300px; /* Adjust height as needed */
-            background-image: url('Project Title.png'); /* Replace with your image URL */
+            height: 300px;
+            background-image: url('Project Title.png');
             background-size: cover;
             background-position: center;
         }
         .headerindex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #C14A42;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  /* Removed position: fixed; */
-  /* Removed top: 0; */
-  /* Removed left: 0; */
-  width: 100%;
-  z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #C14A42;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    z-index: 999;
 }
 
-.logo h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #F0B09D;
+.headerindex .logo img {
+    max-width: 100px; /* Adjust the size as needed */
+    height: auto;
 }
-nav ul li a {
-  color: #F0B09D;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 0 1rem;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #FFA07A;
-}
-body{
-margin: 0;
-font-family: Georgia, 'Times New Roman', Times, serif;
-font-size: 1rem;
-font-weight: 400;
-line-height: 1.5;
-color: #212529;
-text-align: left;
-background-color: #fff;
-}
-.button-container {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 20px; /* Adds some space between buttons */
-}
-
-.project-button {
-  display: inline-block;
-  width: 80%; /* Adjust width as needed */
-  height: 500px; /* Adjust height as needed */
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  text-align: center;
-  line-height: 500px;
-  text-decoration: none;
-  font-size: 48px; /* Adjust font size as needed */
-  border-radius: 30px; /* Adjust border radius for more rectangle shape */
-  transition: background-color 0.3s ease;
-}
-
-.project-button:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-/*project1*/
-/* section 1*/
-.box1 p{
-    background-color: #FBB8A2;
-    border-width: 3px;
-    border-style: solid;
-    padding: 5%;
-    font-size: 20px;
-
-}
-.box1 h3{
-  text-align: center;
-  font-size: 50px;
-
-}
-/* section 2*/
-
-.box2 h3{
-text-align: center;
-font-size: 50px;
-
-}
-.box2 p{
-font-size: 20px;
-background-color: #FBB8A2;
-border-width: 3px;
-border-style: solid;
-padding: 5%;
-}
-
-/*section 3*/
-
-.box3 h3{
-text-align: center;
-font-size: 50px;
-
-}
-.box3 p{
-font-size: 20px;
-background-color: #FBB8A2;
-  border-width: 3px;
-  border-style: solid;
-  padding: 5%;
-}
-
-/*section 4*/
-.box4 h3{
-text-align: center;
-font-size: 50px;
-
-}
-.box4 p{
-font-size: 20px;
-background-color: #FBB8A2;
-  border-width: 3px;
-  border-style: solid;
-  padding: 5%;
-}
-
-.case-study h3{
-  text-align: center;
-  font-size: 40px;
-}
-.case-study h4{
-  font-size:30px
-}
-.describe{
-  font-size:20px;
-  text-align:center;
-  line-height: 2.0;
-}
-
-
-
-.logo h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #F0B09D;
-}
-
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-}
-
-nav ul li a {
-  color: #F0B09D;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 0 1rem;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #FFA07A;
-}
-
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #F0B09D;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #FFA07A;
+        }
+        .project-button {
+            display: inline-block;
+            width: 80%;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            line-height: 500px;
+            text-decoration: none;
+            font-size: 48px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+        .project-button:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .describe {
+            font-size: 20px;
+            text-align: center;
+            line-height: 2.0;
+        }
+        .table th, .table td {
+            text-align: center;
+        }
+        .table th {
+            background-color: #0073e6;
+            color: white;
+        }
+        .callout {
+            background-color: #f9f9f9;
+            border-left: 5px solid #0073e6;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .small-italics {
+            font-style: italic;
+        }
+        .section-table {
+            margin-top: 20px;
+        }
+        .hrow th {
+            background-color: #0073e6;
+            color: white;
+        }
+        .tbody th {
+            background-color: #f0f8ff;
+        }
     </style>
 </head>
 <body>
     <header class="headerindex">
-		<div class="logo">
-			<img src="stamp.png" alt="log" width="25%" height="25%">
-		</div>
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="https://docs.google.com/document/d/1t1_m6O4Gym2jisck62LkEFu7Hahhc5FKJzOWG4fY89g/edit?usp=sharing">Resume</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
+        <div class="logo">
+            <img src="stamp.png" alt="logo" class="img-fluid">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://docs.google.com/document/d/1t1_m6O4Gym2jisck62LkEFu7Hahhc5FKJzOWG4fY89g/edit?usp=sharing">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
     <div class="background-image"></div>
-    <div class="case-study">
-        <h1>Visual Pathways Case Study</h1>
-
+    <h1>Visual Pathways Case Study</h1>
         <div class="section" id="Problem">
             <h2 class="section-title">The Challenge</h2>
-            <div class="section-content">
-                <p>In today's job market, a staggering 70% of American workers find themselves unsatisfied with their career choices, a condition that emphasises an issue of career misalignment and dissatisfaction.</p>
-                <h2 class="section">Problem Statement</h2>
-                <p>How can we design an immersive app that addresses widespread career dissatisfaction by offering interactive, VR-based simulations of various professions, guided by industry professionals, to provide users with a comprehensive and engaging way to explore potential career paths, better aligning their skills and interests with real-world job expectations?</p>
+            <p>In today's job market, a staggering 70% of American workers find themselves unsatisfied with their career choices, a condition that emphasizes an issue of career misalignment and dissatisfaction.</p>
+            <h2 class="section">Problem Statement</h2>
+            <p>How can we design an immersive app that addresses widespread career dissatisfaction by offering interactive, VR-based simulations of various professions, guided by industry professionals, to provide users with a comprehensive and engaging way to explore potential career paths, better aligning their skills and interests with real-world job expectations?</p>
+        </div>
+        <div class="section" id="Solution">
+            <h2 class="section-title">Solution</h2>
+            <p>Visual Pathways directly tackles the challenge of career dissatisfaction through an immersive VR platform that builds upon conventional career guidance methods. By simulating real-life work experiences across various industries, it allows students to explore and understand different career paths through virtual reality. This innovative approach helps to demystify job roles and spark interest in various fields by offering students a unique look at potential careers guided by an industry professional. It makes career exploration interactive and engaging, enabling students to better understand their preferences and make informed decisions about their future, minimizing future career changes and dissatisfaction.</p>
+        </div>
+        <div class="highlight section">
+            <h2 class="section-title">My Role & Timeline</h2>
+            <p><strong>Role:</strong> UX Designer, UX Research, and Testing</p>
+            <p><strong>Timeline:</strong> 10 weeks</p>
+            <p><strong>Tools & Technologies:</strong> Figma, Google Forms, and Slack</p>
+        </div>
+        <div class="section">
+            <h2 class="section-title">Image Carousel</h2>
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="Profile Creation (1).png" alt="Profile Creation">
+                </div>
+                <div class="carousel-slide">
+                    <img src="Access Code (1).png" alt="Access Code">
+                </div>
+                <div class="carousel-slide">
+                    <img src="Matching Quiz (2).png" alt="Matching Quiz">
+                </div>
             </div>
-            <div class="section" id="Solution">
-                <h2 class="section-title">Solution</h2>
-                <div class="section-content">
-                    <p>Visual Pathways directly tackles the challenge of career dissatisfaction through an immersive VR platform that builds upon conventional career guidance methods. By simulating real-life work experiences across various industries, it allows students to explore and understand different career paths through virtual reality. This innovative approach helps to demystify job roles and spark interest in various fields by offering students a unique look of the potential career guided by an industry professional. It makes career exploration interactive and engaging, enabling students to better understand their preferences and make informed decisions about their future, minimizing future career changes and dissatisfaction.</p>
-                </div>
-                <div class="highlight section">
-                    <h2 class="section-title">My Role & Timeline</h2>
-                    <div class="section-content">
-                        <p><strong>Role:</strong> UX Designer, UX Research, and Testing</p>
-                        <p><strong>Timeline:</strong> 10 weeks</p>
-                        <p><strong>Tools & Technologies:</strong> Figma, Google Forms, and Slack</p>
-                    </div>
-                </div>
-                <div class="section">
-                    <h2 class="section-title">Image Carousel</h2>
-                    <div class="section-content">
-                        <div class="carousel-container">
-                            <div class="carousel-slide">
-                                <img src="Profile Creation (1).png" alt="Profile Creation">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="Access Code (1).png" alt="Access Code">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="Matching Quiz (2).png" alt="Matching Quiz">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="Results (1).png" alt="Results">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="Schedule - Bryan (1).png" alt="Schedule - Bryan">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="Meet#1 (1).png" alt="Meet#1">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="VR buffer (2).png" alt="VR buffer">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="Meet#1 (2).png" alt="Meet#1">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="VR buffer (3).png" alt="VR buffer">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="Post-Meet Interest Check 2.png" alt="Post-Meet Interest Check">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="Mutual Interest Form (2).png" alt="Mutual Interest Form">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="Messages (1).png" alt="Messages">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="Profile (1).png" alt="Profile">
-                            </div>
-                            <div class="carousel-slide">
-                                <img src="Search (LinkedIn) (1).png" alt="Search (LinkedIn)">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </div>
+    <div class="container case-study">
+        <div class="step-navigation" id="step-navigation">
+            <a href="#research">1. Research</a>
+            <a href="#ideation">2. Ideation</a>
+            <a href="#prototyping">3. Prototyping</a>
+            <a href="#designing">4. Design</a>
+            <a href="#reflection">5. Reflection</a>
+        </div>
 
-                <div class="step-navigation" id="step-navigation">
-                    <a href="#research">1. Research</a>
-                    <a href="#ideation">2. Ideation</a>
-                    <a href="#prototyping">3. Prototyping</a>
-                    <a href="#designing">4. Testing</a>
-                    <a href="#reflection">5. Reflection</a>
-                </div>
-
-                <div class="section" id="research">
-                    <h1>Research</h1>
-                    <h2 class="section-title">Competetive Analysis</h2>
-                    <div class="section-content">
-                        <p>Given the broad nature of our problem space, we performed an exhaustive competitive analysis of over 3 related products.</p>
-                    </div>
-                    <div class="section-table">
-                    <ol type="I">
-                        <li class="subsection">Competitive Analysis</li>
-                        <p>Given the broad nature of our problem space, we performed an exhaustive competitive analysis of over 3 related products.</p>
-        
-                        <table class="table table-bordered">
-                            <thead>
-                              <tr class="hrow">
+        <div class="section" id="research">
+            <h1>Research</h1>
+            <h2 class="section-title">Competitive Analysis</h2>
+            <div class="section-content">
+                <p>Given the broad nature of our problem space, we performed an exhaustive competitive analysis of over 3 related products.</p>
+            </div>
+            <div class="section-table">
+                <ol type="I">
+                    <li class="subsection">Competitive Analysis</li>
+                    <p>Given the broad nature of our problem space, we performed an exhaustive competitive analysis of over 3 related products.</p>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="hrow">
                                 <th scope="col">Competitors</th>
                                 <th scope="col">Strengths</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr class="tbody">
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="tbody">
                                 <th scope="row">Transfr</th>
-                                <td> 
+                                <td>
                                     <ul>
                                         <li>A student explores career possibilities with short accessible sessions in Career Exploration</li>
                                         <li>A career is selected and training begins, this can include dual enrollment credits and more</li>
-                                        <hr>
-                                    </ul> 
+                                    </ul>
                                 </td>
-                              </tr>
-                              <tr class="tbody">
+                            </tr>
+                            <tr class="tbody">
                                 <th scope="row">CareerLabsVR</th>
                                 <td>
                                     <ul>
-                                    <li>Develop tools to assist career practitioners and those who assist in guiding career choices</li>
-                                    <li>From e-learning modules that guide a facilitator when using VR, to observation forms, walkthrough videos and regular subscriber calls (community of practice/support calls), career info sheets with salary (US and Can), lesson plans with skill identification</li>
+                                        <li>Develop tools to assist career practitioners and those who assist in guiding career choices</li>
+                                        <li>From e-learning modules that guide a facilitator when using VR, to observation forms, walkthrough videos and regular subscriber calls (community of practice/support calls), career info sheets with salary (US and Can), lesson plans with skill identification</li>
+                                    </ul>
                                 </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                <h2 class="section-title">Semi-Structured Interviews</h2>
-                <div class="section-content">
-                    <div class="section-table">
+                            </tr>
+                        </tbody>
+                    </table>
+                </ol>
+            </div>
+            <h2 class="section-title">Semi-Structured Interviews</h2>
+            <div class="section-content">
+                <div class="section-table">
                     <p>Our main objectives were to explore the perspectives of college students, a high school student, and an industry professional regarding the potential benefits of virtual reality (VR) job shadowing in career search and collaboration opportunities.</p>
-                    <p>We conducted semi-structured interviews and asked about 8-10 questions per interview questions include:</p>
+                    <p>We conducted semi-structured interviews and asked about 8-10 questions per interview, including:</p>
                     <ul>
-                      <li>Do you think ‘shadowing’ a job via virtual reality would be beneficial in your career search? In what ways would it be beneficial? (Student)</li>
-                    <li>Would you be interested in collaborating on a VR job shadowing experience related to your field? Why or why not? (Industry Professional)</li>
-                  </ul>
+                        <li>Do you think ‘shadowing’ a job via virtual reality would be beneficial in your career search? In what ways would it be beneficial? (Student)</li>
+                        <li>Would you be interested in collaborating on a VR job shadowing experience related to your field? Why or why not? (Industry Professional)</li>
+                    </ul>
                 </div>
             </div>
-                <h2 class="section-title">Interview Insights</h2>
-                <div class="section-content">
-                  <p class='callout'> "I think having the options to do both [shadowing in person and VR] would be awesome, but I think it's crucial to be able to do it [shaodwing] in person."  <br> <i class="small-italics">- Taj, High School Student</i> </p>
-                </div>
-                <h2 class="section-title">Findings</h2>
-                <div class="section-content">
-                    <P>After conducting the interviews we came up with three main themes:</P>
-                    <img src="Findings.png">
-                  </div>
+            <h2 class="section-title">Interview Insights</h2>
+            <div class="section-content">
+                <p class="callout">"I think having the options to do both [shadowing in person and VR] would be awesome, but I think it's crucial to be able to do it [shadowing] in person." <br> <i class="small-italics">- Taj, Student</i></p>
+                <p class="callout">"Using VR to experience different careers would be very beneficial to the student experience and engagement. This can lead to more targeted learning and better career decisions." <br> <i class="small-italics">- Pippa, Industry Professional</i></p>
+            </div>
+            <h2 class="section-title">Findings</h2>
+            <div class="section-content">
+                <p>After conducting the interviews, we identified three main themes:</p>
+                <img src="Findings.png" alt="Findings">
+            </div>
+        </div>
 
-                <h1>Ideation</h1>  
-                <div class="section" id="ideation">
-                    <h2 class="section-title">Design Goals</h2>
-                    <div class="section-content">
-                        <p>According to our research results many felt that career fairs are disorganized and there is a lack of guidance based on interests. Many interviewees also showed interest in a VR experience with a career exploration and job shadowing experience</p>
+        <div class="section" id="ideation">
+            <h1>Ideation</h1>
+            <h2 class="section-title">Design Goals</h2>
+            <div class="section-content">
+                <p>According to our research results, many felt that career fairs are disorganized and there is a lack of guidance based on interests. Many interviewees also showed interest in a VR experience with career exploration and job shadowing experience.</p>
+            </div>
+            <h2 class="section-title">User Flow</h2>
+            <div class="section-content">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="user flow.jpg" alt="User Flow">
                     </div>
-                    <h2 class="section-title">User Flow</h2>
-                    <div class="section">
+                    <div class="carousel-slide">
+                        <img src="lofi.png" alt="Access Code">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                        <div class="section-content">
-                            <div class="carousel-container">
-                                <div class="carousel-slide">
-                                    <img src="user flow.jpg" alt="Profile Creation">
-                                </div>
-                                <div class="carousel-slide">
-                                    <img src="lofi.png" alt="Access Code">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="section" id="prototyping">
+            <h1>Prototyping</h1>
+            <h2 class="section-title">First Iteration Prototyping</h2>
+            <div class="section-content">
+                <ul>
+                    <li>Students filled out our personality quiz.</li>
+                    <li>Students then watched their top 3 matches’ VR demo videos independently (sourced from Transfr).</li>
+                    <li>Students joined Slack to keep in touch with their recruiters.</li>
+                    <li>Students then decided on their favorite based on the VR demo and went to a table to speak with a recruiter and complete “aptitude tests”.</li>
+                </ul>
+                <div class="section-table">
+                    <table>
+                        <tr>
+                            <th>In-person Feedback</th>
+                            <th>Survey Feedback</th>
+                            <th>IA Feedback</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>Aptitude tests didn’t translate very well.</li>
+                                    <li>Too many people chose popular careers, making it crowded and hard to speak to the recruiter.</li>
+                                    <li>No incentive to use Slack.</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>People did not find the careers relevant.</li>
+                                    <li>Career quiz was easy to take.</li>
+                                    <li>It was interesting to watch the VR video and see what the career might look like.</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Individual VR sessions were not interactive between student and recruiter.</li>
+                                    <li>Unclear why recruiters would benefit from using our product.</li>
+                                    <li>Networking and VR experience were disjointed experiences.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-                <h1>Prototyping</h1>
-                <div class="section" id="prototyping">
-                    <h2 class="section-title">First Interation Prototyping</h2>
-                    
-                    <div class="section-content">
-                        <ul>
-                            <li>Students filled out our personality quiz</li>
-                            <li>Students then watched their top 3 matches’ VR demo videos independently (sourced from Transfr)</li>
-                            <li>Students joined slack to keep in touch with their recruiters</li>
-                            <li>Students then decided on their favorite based on the VR demo and went to a table to speak with a recruiter and complete “aptitude tests”</li>
-                        </ul>
-                        <div class="section-table">
-                        <table>
-                            <tr>
-                              <th>In-person Feedback</th>
-                              <th>Survey Feedback</th>
-                              <th>IA Feedback</th>
-                            </tr>
-                            <tr>
-                              <td>
-                                <ul>
-                                  <li>Aptitude tests didn’t translate very well</li>
-                                  <li>Too many people chose popular careers, making it crowded and hard to speak to the recruiter</li>
-                                  <li>No incentive to use the slack</li>
-                                </ul>
-                              </td>
-                              <td>
-                                <ul>
-                                  <li>People did not find the careers relevant</li>
-                                  <li>Career quiz was easy to take</li>
-                                  <li>It was interesting to watch the VR video and see what the career might look like</li>
-                                </ul>
-                              </td>
-                              <td>
-                                <ul>
-                                  <li>Individual VR sessions were not interactive between student and recruiter</li>
-                                  <li>Unclear why recruiters would benefit from using our product</li>
-                                  <li>Networking and VR experience were disjointed experiences</li>
-                                </ul>
-                              </td>
-                            </tr>
-                          </table>
-                    </div>
-                </div>
-                    <div class="section" id="prototyping">
-                        <h2 class="section-title">Second Interation Prototyping</h2>
-                        <div class="section-content">
-                            <h2>Incorporating feeback</h2>    
-                 <table>
+            </div>
+            <h2 class="section-title">Second Iteration Prototyping</h2>
+            <div class="section-content">
+                <h2>Incorporating Feedback</h2>
+                <table>
                     <tr>
                         <th>Career options not relevant</th>
                         <th>VR experience lacked interaction</th>
@@ -509,77 +363,76 @@ nav ul li a:hover {
                     </tr>
                     <tr>
                         <td>
-                            <p>In Prototype 1, we were limited to careers that already had VR demo videos. For Prototype 2, we changed the careers to be more relevant because we no longer prototypes the VR experience as a video, but rather as an interaction</p>
+                            <p>In Prototype 1, we were limited to careers that already had VR demo videos. For Prototype 2, we changed the careers to be more relevant because we no longer prototyped the VR experience as a video, but rather as an interaction.</p>
                         </td>
                         <td>
-                            <p>Our first prototype had the VR demos as an independent task. This excluded recruiters from being able to interact with the students as they went along the demo. For our second prototype, we had students and recruiters enter the VR environment together to complete the aptitude tasks</p>
+                            <p>Our first prototype had the VR demos as an independent task. This excluded recruiters from being able to interact with the students as they went along the demo. For our second prototype, we had students and recruiters enter the VR environment together to complete the aptitude tasks.</p>
                         </td>
                         <td>
                             <p>Our first prototype was not obviously beneficial to the recruiters. For our second prototype, we had recruiters using VR to complete the aptitude tasks and also had the recruiters select their standout students at the end. This enables recruiters to actually find people interested in the field and showing early talent.</p>
                         </td>
                     </tr>
-                 </table>
-
-                 <h2>Prototyping</h2>
-                 <ul>
-                    <li>Students filled out the career matching quiz once again</li>
-                    <li>After finding out their top 2 matches they joined a slack channel where they were able to join and introduce themselves to their fellow peers</li>
-                    <li>We then had them to go their 1st matchs’ table to do the VR walkthrough which was essentially an aptitude test where the student and recruiter could converse about the job</li>
-                    <li>Then after 5 minutes they did a rotation of the same thing with their 2nd match</li>
-                    <li>After this process the “recruiter” reached out to the top candidate from their session to show interest in furthering the network connection</li>
+                </table>
+                <h2>Prototyping</h2>
+                <ul>
+                    <li>Students filled out the career matching quiz once again.</li>
+                    <li>After finding out their top 2 matches, they joined a Slack channel where they were able to introduce themselves to their fellow peers.</li>
+                    <li>We then had them go to their 1st match’s table to do the VR walkthrough, which was essentially an aptitude test where the student and recruiter could converse about the job.</li>
+                    <li>After 5 minutes, they did a rotation of the same thing with their 2nd match.</li>
+                    <li>After this process, the “recruiter” reached out to the top candidate from their session to show interest in furthering the network connection.</li>
                 </ul>
-                
-                </div>
+            </div>
+        </div>
 
-              <h1>Design</h1>
-                <div class="section" id="designing">
-                    <h2 class="section-title">Style Guide</h2>
-                    <div class="section-content">
-                        <p>For our final prototype, we focused the design of the app to have a futuristic feel to emphasize the VR experience.</p>
-                        <img src="components.png" alt="components">
-                    </div>
-                </div>
+        <div class="section" id="designing">
+            <h1>Design</h1>
+            <h2 class="section-title">Style Guide</h2>
+            <div class="section-content">
+                <p>For our final prototype, we focused the design of the app to have a futuristic feel to emphasize the VR experience.</p>
+                <img src="components.png" alt="Components">
+            </div>
+        </div>
 
-                <div class="section" id="reflection">
-                    <h2 class="section-title">Reflection</h2>
-                    <div class="section-content">
-                        <p>Clear objectives and goals that were set at the beginning of the project.</p>
-                    </div>
-                </div>
+        <div class="section" id="reflection">
+            <h1>Reflection</h1>
+            <h2 class="section-title">Reflection</h2>
+            <div class="section-content">
+                <p>Clear objectives and goals that were set at the beginning of the project.</p>
+            </div>
+        </div>
 
-                <div class="section">
-                    <h2 class="section-title">Project Goals</h2>
-                    <div class="section-content">
-                        <p>Clear objectives and goals that were set at the beginning of the project.</p>
-                    </div>
-                </div>
+        <div class="section">
+            <h2 class="section-title">Project Goals</h2>
+            <div class="section-content">
+                <p>Clear objectives and goals that were set at the beginning of the project.</p>
+            </div>
+        </div>
 
-                <div class="section">
-                    <h2 class="section-title">Solution</h2>
-                    <div class="section-content">
-                        <p>Detailed description of the solution implemented to address the problem.</p>
-                        <p>Include key steps, technologies used, and methodologies applied.</p>
-                    </div>
-                </div>
+        <div class="section">
+            <h2 class="section-title">Solution</h2>
+            <div class="section-content">
+                <p>Detailed description of the solution implemented to address the problem.</p>
+                <p>Include key steps, technologies used, and methodologies applied.</p>
+            </div>
+        </div>
 
-                <div class="section">
-                    <h2 class="section-title">Results</h2>
-                    <div class="section-content">
-                        <p>Quantitative and qualitative results of the project.</p>
-                        <p>Metrics, testimonials, and before/after comparisons.</p>
-                    </div>
-                </div>
+        <div class="section">
+            <h2 class="section-title">Results</h2>
+            <div class="section-content">
+                <p>Quantitative and qualitative results of the project.</p>
+                <p>Metrics, testimonials, and before/after comparisons.</p>
+            </div>
+        </div>
 
-                <div class="section">
-                    <h2 class="section-title">Conclusion</h2>
-                    <div class="section-content">
-                        <p>Summary of the project’s success and its impact on the client.</p>
-                        <p>Future recommendations or next steps.</p>
-                    </div>
-                </div>
+        <div class="section">
+            <h2 class="section-title">Conclusion</h2>
+            <div class="section-content">
+                <p>Summary of the project’s success and its impact on the client.</p>
+                <p>Future recommendations or next steps.</p>
             </div>
         </div>
     </div>
+
     <script>
         window.onscroll = function() {toggleStickyNav()};
 
@@ -588,15 +441,14 @@ nav ul li a:hover {
 
         function toggleStickyNav() {
             if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
+                navbar.classList.add("sticky");
             } else {
                 navbar.classList.remove("sticky");
             }
         }
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.min.js"></script>
 </body>
 </html>
