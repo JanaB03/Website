@@ -1,104 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Jana Bridi - UX Portfolio</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="javascript.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-logo img {
+            height: 24px;
+        }
+        .navbar-container {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar-item a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        .navbar-item a:hover,
+        .navbar-item a.active {
+            background-color: #575757;
+        }
+        .hamburger-icon {
+            display: none;
+        }
+        .hero {
+            position: relative;
+            height: 720px;
+            background-image: url('path/to/your/background-image.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(220, 28, 28);
+            text-align: left;
+        }
+        .hero-content h1 {
+            font-size: 3em;
+        }
+        .hero-content p {
+            font-size: 1.2em;
+        }
+        @media (max-width: 768px) {
+            .navbar-container {
+                display: none;
+            }
+            .hamburger-icon {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        .project-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 100px 20px;
+        }
+        .project {
+            display: block;
+            width: 250px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .project-title {
+            font-size: 1.2em;
+            margin: 10px 0 5px;
+        }
+        .project-subtitle {
+            font-size: 1em;
+            color: #666;
+        }
+        .project-thumbnail {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-	<header class="headerindex">
-		<div class="logo">
-			<img src="stamp.png" alt="log" width="25%" height="25%">
-		</div>
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="https://docs.google.com/document/d/1t1_m6O4Gym2jisck62LkEFu7Hahhc5FKJzOWG4fY89g/edit?usp=sharing">Resume</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<section class="hero">
-			<!--<h2>Welcome to my Website</h2>
-			<p>Here is where you can find all of the projects I have worked or am working on!
-                Although there is not much as I just started getting into design I am exicted to continue and expand my website!
-                <hr width="100%">
-            </p>
-		</section>
-		<section class="portfolio">
-			<h3>Projects:</h3>
-			
-			<div class="buttons">
-				
-				<a href="project1.html">
-					
-						<img src="Screens.png"  width="800" height="400" alt="Portfolio 1">
-		
-				</a>
-				
-				
-				<a href="Project2.html">
-				
-						<img src="image2.png" width="500" height="500" alt="Portfolio 2">
-	
-				</a>
-				<a href="project3.html"><img src="image3.png" width="800" height="400" alt="Portfolio 3"></a>
-				<a href="https://drive.google.com/file/d/1fu50jm6Q8SXw9rjfvd61uKIhVHjS9PgF/view?usp=sharing"><img src="hatecrimeimage.png" width="800" height="400" alt="Portfolio 3"></a>
-			
-			</div>
-		-->
-		<h1>Hello! Im Jana</h1>
-	</section>
-		<div class="align">
-		<p style="font-size:110px">
-			&#128187;UI/UX Designer at
-			<span class="popup">UCSD<span class="popuptext"><img src="giesel.png" alt="Image" /></span></span>
-			 with a focus on designing inclusive interactions 
-		
-		<br>
-		<div class="skills">
-		<h1 style="text-align:left ;" ></h1>
+    <div class="navbar">
+        <div class="navbar-logo">
+            <img src="stamp.png" alt="Portfolio logo">
+        </div>
+        <div class="navbar-container">
+            <div class="navbar-item">
+                <a href="#work" class="active">Work</a>
+            </div>
+            <div class="navbar-item">
+                <a href="#about">About</a>
+            </div>
+            <div class="navbar-item">
+                <a href="path/to/your/resume.pdf" target="_blank" rel="nofollow noopener">Resume</a>
+            </div>
+            <div class="navbar-item">
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+        <div class="hamburger-icon">
+            <svg class="hamburger open" width="48" height="48" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                <rect x="14" y="16" width="20" height="2.28571" fill="currentColor"></rect>
+                <rect x="14" y="22.8571" width="20" height="2.28571" fill="currentColor"></rect>
+                <rect x="14" y="29.7143" width="20" height="2.28571" fill="currentColor"></rect>
+            </svg>
+        </div>
+    </div>
+    <div class="hero">
+        <div class="hero-content">
+            <p>:)</p>
+            <h1>Hi, I'm Jana.</h1>
+            <p>UX Designer at UCSD with a passion for creating inclusive and user-friendly experiences </p>
+            <p>Scroll down to continue _</p>
+        </div>
+    </div>
 
-		<div class="image-row">
-			<img src="figma.png">
-			<img src="css.png">
-			<img src="html.png" alt="Image 1">
-			<img src="java.png" alt="Image 2">
-			<img src="javascript.png" alt="Image 3">
-			
-		  </div>
-		  </div>
-	</div>
-	<!--<img class="line" src="Group 2.png" alt="line">-->
-	<div class="projects">
-		<p>Projects &#127802;</p>
-		</div>
-		
-		<div class="button-container">
-			<a href="project3.html" class="project-button" style="background-image: url('Project\ Title2.png');"></a>
-		</div>
-		<div class="button-container">
-			<a href="case study 1.html" class="project-button" style="background-image: url('Project\ Title.png');"></a>
-		</div>
-		<div class="button-container">
-			<a href="https://github.com/JanaB03/COGS108/blob/main/FinalProject-Group18%20(1).ipynb" class="project-button" style="background-image: url('Project\ Title3.png');"></a>
-		</div>
-		
-		<div class="button-container">
-			<a href="project1.html" class="project-button" style="background-image: url('image3.jpg');">Work in Progress...&#9997;</a>
-		</div>
-	</main>
-
-	
-
-	<footer>
-		<p>Website Designed and Developed by Jana Bridi  <a href="#footnote"></a></p>
-		<div id="footnote">
-		</div>
-	</footer>
+    <div class="project-grid">
+        <a class="project" href="#">
+            <div class="project-name">
+                <div class="project-title">AI Prompt Engineering Redesign</div>
+                <div class="project-subtitle">UX/UI Designer</div>
+            </div>
+            <div class="image-container">
+                <img src="Project Title2.png" alt="Ai project Thumbnial" class="project-thumbnail">
+            </div>
+        </a>
+        <a class="project" href="case study 1.html">
+            <div class="project-name">
+                <div class="project-title">Visual Pathways</div>
+                <div class="project-subtitle">Visual Pathways Redesign | UX/UI Designer</div>
+            </div>
+            <div class="image-container">
+                <img src="Project Title (1).png" alt="VP project thumbnail" class="project-thumbnail">
+            </div>
+        </a>
+        <a class="project" href="#">
+            <div class="project-name">
+                <div class="project-title">Data Science In Practice Hate Crimes In San Diego</div>
+                <div class="project-subtitle">Data Science</div>
+            </div>
+            <div class="image-container">
+                <img src="Project Title3.png" alt="DS project thumbnail" class="project-thumbnail">
+            </div>
+        </a>
+        
+    </div>
 </body>
 </html>
