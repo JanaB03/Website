@@ -70,17 +70,16 @@
                 cursor: pointer;
             }
         }
-
         .project-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 40px; /* Increased gap for more space around projects */
             justify-content: center;
-            padding: 100px 20px;
+            padding: 100px 40px; /* Increased padding for more space around the entire section */
         }
         .project {
             display: block;
-            width: 250px;
+            width: 350px; /* Increased width of each project */
             text-align: center;
             text-decoration: none;
             color: black;
@@ -103,6 +102,32 @@
             height: auto;
             border-radius: 8px;
         }
+
+        .hamburger-icon {
+            cursor: pointer;
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background-color: #333;
+            color: white;
+            width: 200px;
+            list-style: none;
+            padding: 10px;
+        }
+        .menu.open {
+            display: block;
+        }
+        .menu li {
+            padding: 10px;
+            border-bottom: 1px solid #444;
+        }
+        .menu li a {
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -112,16 +137,16 @@
         </div>
         <div class="navbar-container">
             <div class="navbar-item">
-                <a href="#work" class="active">Work</a>
+                <a href="homepage.html" class="active">Work</a>
             </div>
             <div class="navbar-item">
-                <a href="#about">About</a>
+                <a href="about.html">About</a>
             </div>
             <div class="navbar-item">
-                <a href="path/to/your/resume.pdf" target="_blank" rel="nofollow noopener">Resume</a>
+                <a href="https://drive.google.com/file/d/1H8qv4PLaFWj10fJVk5oFMAOd9P-meEge/view?usp=sharing" target="_blank" rel="nofollow noopener">Resume</a>
             </div>
             <div class="navbar-item">
-                <a href="#contact">Contact</a>
+                <a href="contact.html">Contact</a>
             </div>
         </div>
         <div class="hamburger-icon">
@@ -130,13 +155,20 @@
                 <rect x="14" y="22.8571" width="20" height="2.28571" fill="currentColor"></rect>
                 <rect x="14" y="29.7143" width="20" height="2.28571" fill="currentColor"></rect>
             </svg>
+            
         </div>
+        <ul class="menu" id="menu">
+            <li><a href="homepage.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="https://drive.google.com/file/d/1H8qv4PLaFWj10fJVk5oFMAOd9P-meEge/view?usp=sharing">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </div>
     <div class="hero">
         <div class="hero-content">
             <p>:)</p>
             <h1>Hi, I'm Jana.</h1>
-            <p>UX Designer at UCSD with a passion for creating inclusive and user-friendly experiences </p>
+            <p>UX Designer at UCSD with a passion for creating inclusive and user-friendly experiences</p>
             <p>Scroll down to continue _</p>
         </div>
     </div>
@@ -169,7 +201,16 @@
                 <img src="Project Title3.png" alt="DS project thumbnail" class="project-thumbnail">
             </div>
         </a>
-        
     </div>
 </body>
+<script>
+    document.querySelector('.hamburger-icon').addEventListener('click', function() {
+        var menu = document.getElementById('menu');
+        if (menu.classList.contains('open')) {
+            menu.classList.remove('open');
+        } else {
+            menu.classList.add('open');
+        }
+    });
+</script>
 </html>
