@@ -192,8 +192,30 @@
             color: white;
         }
         .tbody th {
-            background-color: #f0f8ff;
+            background-color: #000000ae;
         }
+        .menu {
+	display: none;
+	position: absolute;
+	top: 50px;
+	right: 0;
+	background-color: #333;
+	color: white;
+	width: 200px;
+	list-style: none;
+	padding: 10px;
+}
+.menu.open {
+	display: block;
+}
+.menu li {
+	padding: 10px;
+	border-bottom: 1px solid #444;
+}
+.menu li a {
+	color: white;
+	text-decoration: none;
+}
     </style>
 </head>
 <body>
@@ -204,16 +226,16 @@
             </div>
             <div class="navbar-container">
                 <div class="navbar-item">
-                    <a href="#work" class="active">Work</a>
+                    <a href="homepage.html" class="active">Work</a>
                 </div>
                 <div class="navbar-item">
-                    <a href="#about">About</a>
+                    <a href="about.html">About</a>
                 </div>
                 <div class="navbar-item">
                     <a href="path/to/your/resume.pdf" target="_blank" rel="nofollow noopener">Resume</a>
                 </div>
                 <div class="navbar-item">
-                    <a href="#contact">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </div>
             </div>
             <div class="hamburger-icon">
@@ -222,7 +244,14 @@
                     <rect x="14" y="22.8571" width="20" height="2.28571" fill="currentColor"></rect>
                     <rect x="14" y="29.7143" width="20" height="2.28571" fill="currentColor"></rect>
                 </svg>
+                
             </div>
+            <ul class="menu" id="menu">
+                <li><a href="homepage.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://drive.google.com/file/d/1H8qv4PLaFWj10fJVk5oFMAOd9P-meEge/view?usp=sharing">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
     </header>
     
@@ -516,6 +545,14 @@
                 navbar.classList.remove("sticky");
             }
         }
+        document.querySelector('.hamburger-icon').addEventListener('click', function() {
+			var menu = document.getElementById('menu');
+			if (menu.classList.contains('open')) {
+				menu.classList.remove('open');
+			} else {
+				menu.classList.add('open');
+			}
+		});
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
