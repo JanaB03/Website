@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <title>Visual Pathways</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        .case-study {
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .highlight {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-left: 5px solid #0073e6;
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+        .carousel-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+        .carousel-slide {
+            display: inline-block;
+            min-width: 50%; /* Reduced size */
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+        .carousel-slide img {
+            width: 50%; /* Reduced size */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .step-navigation {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .step-navigation.sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            left: 0;
+            transform: none;
+        }
+        .step-navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        .step-navigation a:hover {
+            background-color: #575757;
+        }
+        .background-image {
+            width: 100%;
+            height: 300px;
+            background-image: url('Project Title2.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar-logo img {
+            height: 24px;
+        }
+        .navbar-container {
+            display: flex;
+            gap: 20px;
+        }
+        .navbar-item a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        .navbar-item a:hover,
+        .navbar-item a.active {
+            background-color: #575757;
+        }
+        .hamburger-icon {
+            display: none;
+        }
+        .hero {
+            position: relative;
+            height: 720px;
+            background-image: url('path/to/your/background-image.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(220, 28, 28);
+            text-align: left;
+        }
+        .hero-content h1 {
+            font-size: 3em;
+        }
+        .hero-content p {
+            font-size: 1.2em;
+        }
+        @media (max-width: 768px) {
+            .navbar-container {
+                display: none;
+            }
+            .hamburger-icon {
+                display: block;
+                cursor: pointer;
+            }
+        }
+        .project-button {
+            display: inline-block;
+            width: 80%;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            line-height: 500px;
+            text-decoration: none;
+            font-size: 48px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+        .project-button:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .describe {
+            font-size: 20px;
+            text-align: center;
+            line-height: 2.0;
+        }
+        .table th, .table td {
+            text-align: center;
+        }
+        .table th {
+            background-color: #0073e6;
+            color: white;
+        }
+        .callout {
+            background-color: #f9f9f9;
+            border-left: 5px solid #0073e6;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .small-italics {
+            font-style: italic;
+        }
+        .section-table {
+            margin-top: 20px;
+        }
+        .hrow th {
+            background-color: #0073e6;
+            color: white;
+        }
+        .tbody th {
+            background-color: #000000ae;
+        }
+        .menu {
+	display: none;
+	position: absolute;
+	top: 50px;
+	right: 0;
+	background-color: #333;
+	color: white;
+	width: 200px;
+	list-style: none;
+	padding: 10px;
+}
+.menu.open {
+	display: block;
+}
+.menu li {
+	padding: 10px;
+	border-bottom: 1px solid #444;
+}
+.menu li a {
+	color: white;
+	text-decoration: none;
+}
+    </style>
+</head>
+<body>
+    <header class="headerindex">
+        <div class="navbar">
+            <div class="navbar-logo">
+                <img src="stamp.png" alt="Portfolio logo">
+            </div>
+            <div class="navbar-container">
+                <div class="navbar-item">
+                    <a href="#work" class="active">Work</a>
+                </div>
+                <div class="navbar-item">
+                    <a href="#about">About</a>
+                </div>
+                <div class="navbar-item">
+                    <a href="path/to/your/resume.pdf" target="_blank" rel="nofollow noopener">Resume</a>
+                </div>
+                <div class="navbar-item">
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="hamburger-icon">
+                <svg class="hamburger open" width="48" height="48" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="color: white;">
+                    <rect x="14" y="16" width="20" height="2.28571" fill="currentColor"></rect>
+                    <rect x="14" y="22.8571" width="20" height="2.28571" fill="currentColor"></rect>
+                    <rect x="14" y="29.7143" width="20" height="2.28571" fill="currentColor"></rect>
+                </svg>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="homepage.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="https://drive.google.com/file/d/1H8qv4PLaFWj10fJVk5oFMAOd9P-meEge/view?usp=sharing">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="background-image"></div>
+    <h1>Prompt Engineering for AI Text-to-Image Generators</h1>
+        <div class="section" id="Problem">
+            <h2 class="section-title">Background</h2>
+            <p>This project was for an upper division Design class at UCSD called Design for Creativity and Productivity. For this project we designed and prototyped an interactice system that adressed a probelm in productivity.</p>
+             </div>
+        <div class="section" id="understanding problem">
+            <h1>Understanding the Problem</h1>
+            <p>AI models lack effective iterative feedback mechanisms that scale with user proficiency.</p>
+            <h2 class="section-title">Underlying Cause</h2>
+            <ul>
+                <li>Greater fine tuning of AI model response requires knowledge of application-specific jargom from end users</li>
+                <li>Beginners are contrained by their limited knowledge of the application/field</li>
+                <li>Companies are contrained by the contraints of their end users</li>
+            </ul>
+            <h2 class="section-title">Problem Statement</h2>
+            <p>"Given that the user has a well-formed intent, how can they interact with previously generated images to fine-tune the model to create what they want?"</p>
+        </div>
+        <div class="highlight section">
+            <h2 class="section-title">My Role & Timeline</h2>
+            <p><strong>Role:</strong> UX Designer, UX Research, and Visual Designer</p>
+            <p><strong>Timeline:</strong> 10 weeks</p>
+            <p><strong>Tools & Technologies:</strong> Figma, Google Forms, and Slack</p>
+        </div>
+        <div class="section">
+            
+          <!--  <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="Base page.png" alt="Profile Creation">
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div class="container case-study">
+        <div class="step-navigation" id="step-navigation">
+            <a href="#research">1. Research</a>
+            <a href="#ideation">2. Ideation</a>
+            <a href="#designing">3. Design</a>
+            <a href="#reflection">4. Reflection</a>
+        </div>
+
+        <div class="section" id="research">
+            <h1>Research</h1>
+            <h2 class="section-title">Academic Research</h2>
+            <p>My team and I wanted to research the importance of using NLI when using AI generators tools. Our research explores the challenges and solutions associated with using everyday human language to communicate with computers, enhancing accessibility, efficiency, and user experience.</p>
+            <h3 class="section-title">View our full research presentation <a href="https://drive.google.com/file/d/16e-iHCGBq48kw_uuHBRu3yctgFw--kG5/view?usp=sharing">Here</a>
+            </h3>
+            <h2 class="section-title">Competitive Analysis</h2>
+            <div class="section-content">
+                <p>Given the broad nature of our problem space, we performed an exhaustive competitive analysis of over 3 related products.</p>
+            </div>
+            
+            
+            
+            <div class="section-table">
+                <ol type="I">
+                    <li class="subsection">Competitive Analysis</li>
+                    <p>Given the broad nature of our problem space, we performed an exhaustive competitive analysis of over 3 related products.</p>
+                    <table class="table table-bordered">
+                        <thead>
+                          <tr class="hrow">
+                            <th scope="col">Competitors             </th>
+                            <th scope="col">Strengths</th>
+                            <th scope="col">Limitations</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="tbody">
+                            <th scope="row">GenAssist</th>
+                            <td> 
+                                <p>Accessible text-to-image generation system that simplifies image selection and generation for Blind and Low Vision Creators</p>
+                            </td>
+                            <td>
+                              <ul>
+                                <li>Focuses on accessibilty and creativity rather than productivity</li>
+                              <li>Users are unfamiliar with domain-specific styilizing terms for first image</li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr class="tbody">
+                            <th scope="row">Promptify</th>
+                            <td>
+                                <p>Enhance text-to-image generation through interactive LLM system that suggests and refines prompts</p>
+                            </td>
+                            <td>
+                              <ul>
+                                <li>Users that knew what they wanted found extra prompt ideation features less useful/more tedious</li>
+                                <li>Systems flexibility to accommodate different user preferences is limited</li>
+                              </ul>
+                            </td>
+                          </tr>
+                          
+                      
+                        </tbody>
+                      </table>
+                </ol>
+            </div>
+           
+
+        <div class="section" id="ideation">
+            <h1>Ideation</h1>
+            <h2 class="section-title">Sketches</h2>
+            <div class="section-content">
+                <p>We each did low-fi sketches to brainstorm different ideas to adress the problem</p></div>
+            <div class="section-content">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="sketch1.png" alt="Sketch 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="sketch2.png" alt="Sketch 2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="section-title">Sketches improvement</h2>
+            <div class="section-content">
+                <p>After going through sketches from above we then selected ideas that we wanted to improve we selected the negative prompting feature and image component selection and further explored the idea and added more details to our skethes</p>
+        
+            <div class="section-content">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="sketch3.png" alt="Sketch 3">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="sketch4.png" alt="Sketch 4">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="sketch 5.png" alt="Sketch 5">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="section-title">Wireframes</h2>
+        <div class="section-content">
+            <p> We then created our wireframes from our different sketches</p>
+            <div class="section-content">
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="wireframe1.png" alt="wireframe 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="wireframe2.png" alt="Wireframe 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="wireframe3.png" alt="Wireframe 3">
+                    </div>
+                </div>
+            </div>  
+        
+
+        <div class="section" id="designing">
+            <h1>Design</h1>
+            <h2 class="section-title">Final Design</h2>
+            <div class="section-content">
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F15CreWvu1kXQd8hcewnrJc%2FUntitled%3Ftype%3Ddesign%26node-id%3D1-912%26t%3DhXOXHiNGOCzP7UBo-1%26scaling%3Dscale-down%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A912%26mode%3Ddesign" allowfullscreen></iframe> </div>
+
+        <div class="section" id="reflection">
+            <h1>Reflection</h1>
+            
+            <div class="section-content">
+                <table>
+                    <tr>
+                      <th>Natural Language Feeback</th>
+                      <th>Component Selection</th>
+                      <th>Vocal Input Translation</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p>Isolated editable natural language statements help users develop mental model of the system
+
+                        </p>
+                      </td>
+                      <td>
+                        <p>Component selection allows user to specify intent during fine-tuning
+
+                        </p>
+                      </td>
+                      <td>
+                        <p>Translating natural utterances into specific, executable commands
+
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                  <p>To recap, we created three different features that all try to bridge the gap between user intents and system output and encourage system understanding. We see that isolated editable natural language statements help users develop a mental model of how the system works. Component selection offers an intuitive way for users to specify what components of an image that they like or dislike, and vocal input allows us to translate our most natural form of language input into executable commands that the computer can understand accurately. 
+
+                  </p>
+
+              <h3>Implication and Future Directions</h3>
+              <p>As these LLM models improve we’ll be able to achieve more and be able to perform even more complex text-to-image generation tasks. But if we continue to use natural language as a mode of input, we need to make sure that this increased complexity of the system is still able to connect with our basic intents. We believe that leveraging AI to encourage system understanding of these complex mechanisms will be very important in how these models will be able to keep this bridge of communication between user and system strong. Text-to-image generation models is just one small facet of natural language input. All programs that will take in natural language as input will have to find away to convey an effective mental model of their system for their end users. Furthermore, within text-to-image generation, we operated on two main assumptions: that the user already had a well-formed idea of what they wanted, and that images had already been created. Future research should look into how we can encourage creativity through prompt engineering, even before an initial batch of images is created. 
+</p>
+              <br>
+              <p>However, within text-to-image generation, we operated on two main assumptions: that the user already had a well-formed idea of what they wanted, and that images had already been created. Future research should look into how we can encourage creativity through prompt engineering, even before an initial batch of images is created. How can we design effective interfaces that guide the user through prompt generation without constraining creativity?
+
+              </p>
+                
+
+        
+        
+    </div>
+
+    <script>
+        window.onscroll = function() {toggleStickyNav()};
+
+        var navbar = document.getElementById("step-navigation");
+        var sticky = navbar.offsetTop;
+
+        function toggleStickyNav() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+        document.querySelector('.hamburger-icon').addEventListener('click', function() {
+			var menu = document.getElementById('menu');
+			if (menu.classList.contains('open')) {
+				menu.classList.remove('open');
+			} else {
+				menu.classList.add('open');
+			}
+		});
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+</body>
+</html>
