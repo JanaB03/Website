@@ -19,6 +19,10 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: background-color 0.3s;
+        }
+        .navbar.scrolled {
+            background-color: rgba(51, 51, 51, 0.9);
         }
         .navbar-logo img {
             height: 24px;
@@ -72,18 +76,23 @@
         }
         .project-grid {
             display: flex;
-            flex-wrap: wrap;
-            gap: 40px; /* Increased gap for more space around projects */
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
             justify-content: center;
-            padding: 100px 40px; /* Increased padding for more space around the entire section */
+            padding: 100px 40px;
         }
         .project {
-            display: block;
-            width: 350px; /* Increased width of each project */
-            text-align: center;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 900px;
             text-decoration: none;
             color: black;
             transition: transform 0.3s, box-shadow 0.3s;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
         }
         .project:hover {
             transform: scale(1.05);
@@ -98,11 +107,11 @@
             color: #666;
         }
         .project-thumbnail {
-            width: 100%;
+            width: 250px;
             height: auto;
             border-radius: 8px;
+            margin-right: 20px;
         }
-
         .hamburger-icon {
             cursor: pointer;
         }
@@ -128,10 +137,21 @@
             color: white;
             text-decoration: none;
         }
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 5px;
+            background: red;
+            z-index: 1001;
+            transition: width 0.25s ease-in-out;
+        }
     </style>
 </head>
 <body>
-    <div class="navbar">
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    <div class="navbar" id="navbar">
         <div class="navbar-logo">
             <img src="stamp.png" alt="Portfolio logo">
         </div>
@@ -155,7 +175,6 @@
                 <rect x="14" y="22.8571" width="20" height="2.28571" fill="currentColor"></rect>
                 <rect x="14" y="29.7143" width="20" height="2.28571" fill="currentColor"></rect>
             </svg>
-            
         </div>
         <ul class="menu" id="menu">
             <li><a href="index.html">Work</a></li>
@@ -168,49 +187,76 @@
         <div class="hero-content">
             <p>:)</p>
             <h1>Hi, I'm Jana.</h1>
-            <p>UX Designer at UCSD with a passion for creating inclusive and user-friendly experiences</p>
+            <p>Product Designer at UCSD with a passion for creating inclusive and user-friendly experiences</p>
             <p>Scroll down to continue _</p>
         </div>
     </div>
 
     <div class="project-grid">
         <a class="project" href="case study 2.html">
+            <img src="Project Title2.png" alt="Ai project Thumbnial" class="project-thumbnail">
             <div class="project-name">
                 <div class="project-title">AI Prompt Engineering Redesign</div>
                 <div class="project-subtitle">UX/UI Designer</div>
             </div>
-            <div class="image-container">
-                <img src="Project Title2.png" alt="Ai project Thumbnial" class="project-thumbnail">
-            </div>
         </a>
         <a class="project" href="case study 1.html">
+            <img src="Project Title (1).png" alt="VP project thumbnail" class="project-thumbnail">
             <div class="project-name">
                 <div class="project-title">Visual Pathways</div>
-                <div class="project-subtitle">Visual Pathways Redesign | UX/UI Designer</div>
-            </div>
-            <div class="image-container">
-                <img src="Project Title (1).png" alt="VP project thumbnail" class="project-thumbnail">
+                <div class="project-subtitle">
+                    <h4>Summary:</h4>
+                    <p>Visual Pathways uses VR to improve career guidance by simulating real-life work experiences across various industries. This interactive approach helps students explore and understand different careers, guided by industry professionals, to make informed decisions and reduce future career dissatisfaction.</p>
+                </div>
             </div>
         </a>
         <a class="project" href="https://github.com/JanaB03/COGS108/blob/main/FinalProject-Group18%20(1).ipynb">
+            <img src="Project Title3.png" alt="DS project thumbnail" class="project-thumbnail">
             <div class="project-name">
                 <div class="project-title">Data Science In Practice Hate Crimes In San Diego</div>
                 <div class="project-subtitle">Data Science</div>
             </div>
-            <div class="image-container">
-                <img src="Project Title3.png" alt="DS project thumbnail" class="project-thumbnail">
-            </div>
         </a>
     </div>
+
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            var navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            // Scroll indicator
+            var scrollIndicator = document.getElementById('scrollIndicator');
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+            var clientHeight = document.documentElement.clientHeight;
+            var scrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
+            scrollIndicator.style.width = scrolled + '%';
+        });
+
+        // Hamburger menu toggle
+        document.querySelector('.hamburger-icon').addEventListener('click', function() {
+            var menu = document.getElementById('menu');
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+            } else {
+                menu.classList.add('open');
+            }
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('.navbar-item a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
-<script>
-    document.querySelector('.hamburger-icon').addEventListener('click', function() {
-        var menu = document.getElementById('menu');
-        if (menu.classList.contains('open')) {
-            menu.classList.remove('open');
-        } else {
-            menu.classList.add('open');
-        }
-    });
-</script>
 </html>
