@@ -131,6 +131,62 @@ body {
 	color: white;
 	text-decoration: none;
 }
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slides {
+    display: none;
+    text-align: center;
+}
+
+.slides img {
+    width: 100%;
+    max-height: 500px;
+    border-radius: 8px;
+}
+
+.caption {
+    color: #f2f2f2;
+    font-size: 1em;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 8px 8px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 </style>
 <body>
 	<div class="navbar">
@@ -139,10 +195,10 @@ body {
         </div>
         <div class="navbar-container">
             <div class="navbar-item">
-                <a href="index.html" class="active">Work</a>
+                <a href="index.html" >Work</a>
             </div>
             <div class="navbar-item">
-                <a href="about.html">About</a>
+                <a href="about.html"class="active">About</a>
             </div>
             <div class="navbar-item">
                 <a href="https://drive.google.com/file/d/1H8qv4PLaFWj10fJVk5oFMAOd9P-meEge/view?usp=sharing" target="_blank" rel="nofollow noopener">Resume</a>
@@ -169,7 +225,7 @@ body {
 	<main>
 		<section class="about">
 			<h3>About Me</h3>
-			<p>Hello! I am Jana, and I am a third-year Cognitive Science Design and Interaction major. I am interested in designing things that help everyone around the world!
+			<p>Hello! I am Jana, and I am a third-year Cognitive Science Design and Interaction major. I am interested in designing products that help everyone around the world!
                 <break>
                     I switched majors from Biological Anthropology in my first year to Cognitive Science in the winter of 2023. I am fairly new to Cognitive Science and Design, but I realized how fun and exciting it can be, and it became my passion. 
                 </break>
@@ -188,7 +244,24 @@ body {
 			<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/1ek6Z6UFk02Z6FRZyS1a3F?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 		
 			<h3 class="aboutpadding"> And when I am not designing I am playing the flute</h3>
-
+			<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FPortervilleUnified%2Fposts%2Fpfbid021Qsz5sKkTTBhEJ7RmtxFykrut8LeXsqFuvpCzSazzka6JmpJVWJrxYm4SsEzpxphl&show_text=true&width=500" width="500" height="462" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    
+			
+			<!--<div class="slideshow-container">
+                <div class="slides fade">
+                    
+                </div>
+                <div class="slides fade">
+                    <img src="path/to/your/image2.jpg" alt="Playing a solo piece">
+                    <div class="caption">Playing a solo piece</div>
+                </div>
+                <div class="slides fade">
+                    <img src="path/to/your/image3.jpg" alt="In the studio">
+                    <div class="caption">In the studio recording</div>
+                </div>
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+            </div>-->
 		</section>
 	</main>
 	<script>
@@ -200,6 +273,39 @@ body {
 				menu.classList.add('open');
 			}
 		});
+		let slideIndex = 0;
+showSlides();
+
+/*function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }    
+    slides[slideIndex - 1].style.display = "block";  
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+
+document.querySelector('.prev').addEventListener('click', function() {
+    plusSlides(-1);
+});
+
+document.querySelector('.next').addEventListener('click', function() {
+    plusSlides(1);
+});
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);*/
+
+
 	</script>
 </body>
 </html>
