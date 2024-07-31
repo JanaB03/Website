@@ -216,6 +216,47 @@
 	color: white;
 	text-decoration: none;
 }
+/* Add this CSS to style the active link */
+.step-navigation a.active {
+  font-weight: bold;
+  color: red; /* Or any other color of your choice */
+}
+.square-section {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Centers the grid horizontally */
+}
+
+.square {
+    background-color: white; /* White background */
+    border-left: 6px solid blue; /* Thicker border on the left */
+    border-bottom: 6px solid blue; /* Thicker border on the bottom */
+    border-top-right-radius: 12px; /* Rounded top-right corner */
+    border-bottom-right-radius: 12px; /* Rounded bottom-right corner */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Adds some space around the text */
+    box-shadow: 3px 3px 8px rgba(0, 0, 255, 0.3); /* Adds a blue shadow for the 3D effect */
+    box-sizing: border-box;
+    min-width: 100px; /* Minimum width of the square */
+    min-height: 100px; /* Minimum height of the square */
+}
+
+.text {
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+    text-align: center; /* Centers text inside the square */
+}
+.spacer {
+    height: 100px; /* Adjust the height as needed */
+}
+
+
+
     </style>
 </head>
 <body>
@@ -256,12 +297,22 @@
     </header>
     
     <div class="background-image"></div>
+    <div class="container case-study">
+        <div class="step-navigation" id="step-navigation">
+            <a href="#background">1. Background</a>
+            <a href="#research">2. Research</a>
+            <a href="#ideation">3. Ideation</a>
+            <a href="#prototyping">4. Prototyping</a>
+            <a href="#designing">5. Design</a>
+            <a href="#reflection">6. Reflection</a>
+        </div>
+    <div class="section" id="background">
     <h1>Visual Pathways Case Study</h1>
         <div class="section" id="Problem">
             <h2 class="section-title">The Challenge</h2>
-            <p>In today's job market, a staggering 70% of American workers find themselves unsatisfied with their career choices, a condition that emphasizes an issue of career misalignment and dissatisfaction.</p>
+            <p>In today's job market, a staggering <b> 70%</b> of American workers find themselves unsatisfied with their career choices, a condition that emphasises an issue of career misalignment and dissatisfaction. The modern professional is expected to change careers an average of 5-7 times during their working life, showing a significant gap in career exploration and decision-making processes. </p>
             <h2 class="section">Problem Statement</h2>
-            <p>How can we design an immersive app that addresses widespread career dissatisfaction by offering interactive, VR-based simulations of various professions, guided by industry professionals, to provide users with a comprehensive and engaging way to explore potential career paths, better aligning their skills and interests with real-world job expectations?</p>
+            <p><strong>How can we design an immersive app that addresses widespread career dissatisfaction by offering interactive, VR-based simulations of various professions, guided by industry professionals, to provide users with a comprehensive and engaging way to explore potential career paths, better aligning their skills and interests with real-world job expectations?</strong></p>
         </div>
         <div class="section" id="Solution">
             <h2 class="section-title">Solution</h2>
@@ -324,21 +375,73 @@
             </div>
         </div>
     </div>
-    <div class="container case-study">
-        <div class="step-navigation" id="step-navigation">
-            <a href="#research">1. Research</a>
-            <a href="#ideation">2. Ideation</a>
-            <a href="#prototyping">3. Prototyping</a>
-            <a href="#designing">4. Design</a>
-            <a href="#reflection">5. Reflection</a>
-        </div>
+</div>
+
+<div class="spacer"></div> 
+
 
         <div class="section" id="research">
             <h1>Research</h1>
-            <h2 class="section-title">Competitive Analysis</h2>
+            <p>Our main objectives were to explore the perspectives of college students, a high school student, and an industry professional regarding the potential benefits of virtual reality (VR) job shadowing in career search and collaboration opportunities</p>
+            <h2 class="section-title">Literature Review</h2>
+            <div class="section-content">
+            <section class="square-section">
+                <div class="square" id="square1">
+                    <p class="text">“70% of American workers are unsatisfied with their career choices” Inc
+                    </p>
+                </div>
+                <div class="square" id="square2">
+                    <p class="text">80% of the students say they would be more engaged in learning if they had deeper knowledge about their own aptitudes and opportunities.</p>
+                </div>
+                <div class="square" id="square3">
+                    <p class="text">Virtual reality with controllers received better evaluations compared to those utilizing cardboard with 360 videos or animated 3D graphics with augmented reality glasses (Prasolova-Førland et. al.)
+                    </p>
+                </div>
+                <div class="square" id="square4">
+                    <p class="text">41% of students feel unprepared to make a career choice at graduation
+                    </p>
+                </div>
+            </section>
+
+            
+            <h2 class="section-title">Semi Structured Interviews</h2>
+            <div class="section-content">
+                <p>We conducted semi-structured interviews and asked about 8-10</p>
+                <p>We conducted an interview with 2 college students, 1 high school student, 1 industry professional </p>
+          
+                <ul>
+                    <li> Do you think ‘shadowing’ a job via virtual reality would be beneficial in your career search? In what ways would it be beneficial? (Student)</li>
+                    <li>Would you be interested in collaborating on a VR job shadowing experience related to your field? Why or why not? (Industry Professional)</li>
+                </ul>
+                <h2 class="section-title">Interview Insights</h2>
+                <div class="section-content">
+                    
+                <ul>
+                    <li>Students found Career Fairs disorganized and overwhelming
+                    </li>
+                    <li>
+                        People wanted in person interaction 
+                    </li>
+                    <li>
+                        Industry professionals want to interact with motivated students, not just everyone
+
+                    </li>
+                </ul>
+                <p class="callout">"I think having the options to do both [shadowing in person and VR] would be awesome, but I think it's crucial to be able to do it [shadowing] in person." <br> <i class="small-italics">- Taj, Student</i></p>
+                    <p class="callout">"Using VR to experience different careers would be very beneficial to the student experience and engagement. This can lead to more targeted learning and better career decisions." <br> <i class="small-italics">- Pippa, Industry Professional</i></p>
+                </div>
+                <h2 class="section-title">Findings</h2>
+                <div class="section-content">
+                    <p>After conducting the interviews, we identified three main themes:</p>
+                    <img src="Findings.png" alt="Findings">
+                </div>
+            </div>
+                  <h2 class="section-title">Competitive Analysis</h2>
             <div class="section-content">
                 <p>Given the broad nature of our problem space, we performed an exhaustive competitive analysis of over 3 related products.</p>
             </div>
+        </div>
+       
             <div class="section-table">
                 <ol type="I">
                     <li class="subsection">Competitive Analysis</li>
@@ -373,29 +476,35 @@
                     </table>
                 </ol>
             </div>
-            <h2 class="section-title">Semi-Structured Interviews</h2>
-            <div class="section-content">
-                <div class="section-table">
-                    <p>Our main objectives were to explore the perspectives of college students, a high school student, and an industry professional regarding the potential benefits of virtual reality (VR) job shadowing in career search and collaboration opportunities.</p>
-                    <p>We conducted semi-structured interviews and asked about 8-10 questions per interview, including:</p>
-                    <ul>
-                        <li>Do you think ‘shadowing’ a job via virtual reality would be beneficial in your career search? In what ways would it be beneficial? (Student)</li>
-                        <li>Would you be interested in collaborating on a VR job shadowing experience related to your field? Why or why not? (Industry Professional)</li>
-                    </ul>
-                </div>
-            </div>
-            <h2 class="section-title">Interview Insights</h2>
-            <div class="section-content">
-                <p class="callout">"I think having the options to do both [shadowing in person and VR] would be awesome, but I think it's crucial to be able to do it [shadowing] in person." <br> <i class="small-italics">- Taj, Student</i></p>
-                <p class="callout">"Using VR to experience different careers would be very beneficial to the student experience and engagement. This can lead to more targeted learning and better career decisions." <br> <i class="small-italics">- Pippa, Industry Professional</i></p>
-            </div>
-            <h2 class="section-title">Findings</h2>
-            <div class="section-content">
-                <p>After conducting the interviews, we identified three main themes:</p>
-                <img src="Findings.png" alt="Findings">
-            </div>
-        </div>
 
+            <h2 class="section-title">How We Implemented Our Research Findings</h2>
+                <div class="section-content">
+                    <p>Features in Visual Pathways:
+                    </p>
+                    <ul>
+                        There are benefits to both sides: the student + the recruiter
+                        
+                        
+                            <ol>VR</ol>
+                            <li>
+                            Career exploration is done through virtual reality instead of simply talking to the industry professionals
+                            
+                            </li>
+                            <ol>Scheduling</ol>
+                            <li>
+                                Once students get matched with careers, our app makes organization of an in person career fair seamless with automatically created schedules of which tables to go to and at what time
+
+                            </li>
+                            <ol>In app communication and socialization 
+                            </ol>
+                            <li>
+                                Students and recruiters are able to message and follow each other in our app 
+
+                            </li>
+
+                    </ul>
+        
+            <div class="spacer"></div> 
         <div class="section" id="ideation">
             <h1>Ideation</h1>
             <h2 class="section-title">Design Goals</h2>
@@ -414,6 +523,7 @@
                 </div>
             </div>
         </div>
+        <div class="spacer"></div> 
 
         <div class="section" id="prototyping">
             <h1>Prototyping</h1>
@@ -490,6 +600,8 @@
             </div>
         </div>
 
+        <div class="spacer"></div> 
+
         <div class="section" id="designing">
             <h1>Design</h1>
             <h2 class="section-title">Style Guide</h2>
@@ -499,6 +611,8 @@
             </div>
             <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F4JamZs9t0clIU09Y0Y2U0p%2FFigma-cogs-123-cover%3Fnode-id%3D184-642%26t%3DF7psQQG1WWeFwBht-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26page-id%3D0%253A1%26starting-point-node-id%3D184%253A642%26show-proto-sidebar%3D1" allowfullscreen></iframe>
         </div>
+
+        <div class="spacer"></div> 
 
         <div class="section" id="reflection">
             <h1>Reflection</h1>
@@ -537,7 +651,7 @@
 
         var navbar = document.getElementById("step-navigation");
         var sticky = navbar.offsetTop;
-
+        
         function toggleStickyNav() {
             if (window.pageYOffset >= sticky) {
                 navbar.classList.add("sticky");
